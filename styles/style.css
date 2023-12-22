@@ -21,7 +21,15 @@ body.enlaces {
     color: white;
 }
 
-h1.index {
+.logoHeader {
+    width: 80px;
+}
+
+.logoFooter {
+    width: 25px;
+}
+
+h1.index, h2.index {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +76,7 @@ picture {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 div.video {
@@ -130,6 +139,7 @@ p.enlaces a{
 p.enlaces a:hover{
     color: yellow;
 }
+
 footer.index{
     text-align: center;
     width: 100%;
@@ -140,4 +150,36 @@ footer.index{
 footer{
     text-align: center;
     width: 100%;
+}
+
+.jonas {
+    margin-top: 3rem;
+}
+
+.luna {
+    width: 500px;
+    border-radius: 5px;
+    clip-path: path('M100 100 m-75 0 a75 75 0 1 0 150 0 a75 75 0 1 0 -150 0');
+}
+
+@keyframes crecerYdesaparecer {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.svg {
+    animation: crecerYdesaparecer 2s infinite;
+    width: 5%;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
