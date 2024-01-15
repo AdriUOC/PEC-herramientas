@@ -57,8 +57,8 @@
     </div>
     <h3 class="video">Opening de la serie: </h3>
     <div class="video">
-        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8c399HPb01s?si=hagogh_EnCbroln_" title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <img loading="lazy" src="../imgs/negro.png" width="560" height="315" alt="Vídeo placeholder">
+        <button class="play-button" onclick="loadYouTubeVideo(this)">Play</button>
     </div>
     
     <footer>
@@ -70,5 +70,23 @@
             <p id="year">&copy; November 2023, Adrián Sánchez Cabrera</p>
         </nav>
     </footer>
+    <script async>
+        function loadYouTubeVideo(button) {
+            var videoContainer = button.closest('.video');
+        
+            var iframe = document.createElement('iframe');
+            iframe.width = '560';
+            iframe.height = '315';
+            iframe.src = 'https://www.youtube.com/embed/8c399HPb01s?si=hagogh_EnCbroln_';
+            iframe.frameborder = '0';
+            iframe.title = 'YouTube video player';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowfullscreen = true;
+        
+            videoContainer.innerHTML = ''; // Limpiar el contenedor
+            videoContainer.appendChild(iframe);
+        }
+    </script>
 </body>
+
 </html>

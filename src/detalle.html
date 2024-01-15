@@ -46,10 +46,10 @@
 
         <h3 class="video">Una de sus grandes escenas en la serie Dark:</h3>
         <div class="video">
-            <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/7fx3Lm85uDg?si=T2VmhqRNwCw8rPBy" title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img loading="lazy" src="../imgs/negro.png" width="560" height="315" alt="Vídeo placeholder">
+            <button class="play-button" onclick="loadYouTubeVideo(this)">Play</button>
         </div>
-
+        
         <h3 class="video"> Biografía de su personaje, Jonas: </h3>
         <p>Jonas Kahnwald, interpretado por el actor alemán Louis Hofmann, es el personaje central y protagonista de la serie "Dark". La historia de Jonas comienza con la trágica desaparición de su padre, Michael Kahnwald, y su búsqueda de respuestas lo lleva a descubrir los misteriosos secretos de la ciudad ficticia de Winden. A medida que la trama se desenvuelve, Jonas se encuentra atrapado en una compleja red de viajes en el tiempo, paradojas temporales y conflictos familiares.</p>
         <p>A lo largo de la serie, Jonas experimenta una transformación profunda, enfrentando pérdidas dolorosas y descubriendo la conexión entre las distintas líneas temporales que afectan su vida y la de quienes lo rodean. Su papel central en el entramado temporal lo coloca en situaciones desafiantes y morales, mientras lucha por comprender y cambiar el curso del destino.</p>
@@ -67,5 +67,22 @@
             <p id="year">&copy; November 2023, Adrián Sánchez Cabrera</p>
         </nav>
     </footer>
+    <script async>
+        function loadYouTubeVideo(button) {
+            var videoContainer = button.closest('.video');
+        
+            var iframe = document.createElement('iframe');
+            iframe.width = '560';
+            iframe.height = '315';
+            iframe.src = 'https://www.youtube.com/embed/7fx3Lm85uDg?si=T2VmhqRNwCw8rPBy';
+            iframe.frameborder = '0';
+            iframe.title = 'YouTube video player';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowfullscreen = true;
+        
+            videoContainer.innerHTML = ''; // Limpiar el contenedor
+            videoContainer.appendChild(iframe);
+        }
+    </script>
 </body>
 </html>
